@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
+from admin_api.router import router as admin_router
 from worker.views import AuthToken, SessionViewSet, SpecializationViewSet, WorkerViewSet
 from workplace.views import WorkplaceViewSet
 
@@ -29,6 +30,7 @@ router.register(r'session', SessionViewSet, basename='session')
 
 urlpatterns = [
     path('api/', include(router.urls)),
+    path('admin_api/', include(router.urls)),
     # path('auth/', AuthToken.as_view()),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))

@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  flex: 2;
+  height: 100%;
+  min-height: 100%;
+  background: white;
+  box-shadow: 14.0351px 0px 25px rgba(86, 128, 248, 0.03), 35.0877px 0px 70px rgba(86, 128, 248, 0.05), 23.8596px 5.61404px 50px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.menuUp {
+  flex: 10;
+}
+
+.menuDown {
+  flex: 1;
+}
+
+.nav a {
+  font-family: Roboto, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 15px 0;
+  color: #707C97;
+  padding-left: 3px;
+}
+
+/*.nav a svg path {*/
+/*  fill: #707C97;*/
+/*}*/
+
+.nav a.active, .nav a:hover {
+  cursor: pointer;
+  color: #00BBC4;
+  border-left: 3px solid #00BBC4;
+  padding-left: 0;
+}
+
+.nav a.active path, .nav a:hover path {
+  fill: #00BBC4;
+}
+
+.nav a svg {
+  margin: 0 20px 5px 40px;
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+}
+
+.content {
+  flex: 8;
+  background: linear-gradient(180deg, #FFF9F3 0%, #EEF2F6 100%);
+}
+
