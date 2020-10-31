@@ -30,6 +30,9 @@ class Session(models.Model):
     started_at = models.DateTimeField()
     ended_at = models.DateTimeField(null=True, db_index=True)
 
+    def __str__(self):
+        return "%s (%s): %s" % (self.worker, self.workplace, self.started_at)
+
 
 class Tracking(models.Model):
     worker = models.ForeignKey(Worker, on_delete=models.CASCADE)
@@ -40,8 +43,14 @@ class Tracking(models.Model):
     acceleration = models.JSONField(null=True)
     created_at = models.DateTimeField()
 
+    def __str__(self):
+        return "%s (%s)" % (self.worker, self.created_at)
+
 
 class Sos(models.Model):
     session = models.ForeignKey(Session, on_delete=models.CASCADE)
     description = models.TextField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "#%s %s (%s)" % (self.id, self.session.workplace, self.session.worker, )
