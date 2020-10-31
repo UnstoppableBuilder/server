@@ -4,6 +4,10 @@ from django.contrib.gis.db import models
 class Workplace(models.Model):
     name = models.CharField(max_length=255, null=False, blank=False)
     address = models.TextField(blank=True, null=True)
+    contract = models.CharField(max_length=255, null=True, blank=True)
+    squares = models.CharField(max_length=255, null=True, blank=True)
+    customer = models.CharField(max_length=255, null=True, blank=True)
+    contractor = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return self.name
