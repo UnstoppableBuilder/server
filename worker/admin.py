@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from worker.models import Specialization, Worker, Sos, Tracking, Session
+from worker.forms import TrackingForm
 
 
 @admin.register(Specialization)
@@ -15,7 +16,7 @@ class WorkerAdmin(admin.ModelAdmin):
 
 @admin.register(Tracking)
 class TrackingAdmin(admin.ModelAdmin):
-    pass
+    form = TrackingForm
 
 
 @admin.register(Sos)
