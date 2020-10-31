@@ -1,36 +1,22 @@
-import { ReactComponent as Arrow } from '../icons/arrow.svg';
+import {
+  Switch,
+  Route,
+  useRouteMatch,
+} from "react-router-dom";
 
-import { useEffect, useState } from 'react';
-import ProjectItem from '../components/ProjectItem';
+import ProjectList from "../components/ProjectList";
+import ProjectDetails from "../components/ProjectDetails";
 
 import './Page.css';
 
 export default function Projects() {
-  const [list, setList] = useState([])
-  useEffect(() => {
-    fetch("/api/workplace/").then((result) => {
-      return result.json()
-    }).then((data) => {
-      setList(data);
-    })
-  }, []);
-
-  const items = list.map((value, index) => {
-    return <ProjectItem item={value} key={index} />
-  });
-
-  return <div className="page">
-    <div className="page-header">
-      <div className="title">
-        <h1>Проекты</h1>
-        <p>Сначала более новые&nbsp;<Arrow /></p>
-      </div>
-      <div className="search"></div>
-      <div className="button"></div>
-      <div className="login"></div>
-    </div>
-    <div className="page-content">
-      {items}
-    </div>
-  </div>;
+  let match = useRouteMatch();
+  return <Switch>
+        <Route path={`${match.path}/:projectId`}>
+          <ProjectDetails />
+        </Route>
+        <Route path={match.path}>
+          <ProjectList />
+        </Route>
+      </Switch>;
 };

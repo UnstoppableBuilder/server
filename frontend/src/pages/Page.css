@@ -1,23 +1,28 @@
 .page {
-    padding: 30px;
+    padding: 0 70px 0 70px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .page-header {
+    flex: 1;
+    margin-top: 50px;
     padding: 15px 0;
     border-bottom: 1px solid #D4D4D4;
     display: flex;
 }
 
 .page-header .title {
-    flex: 3;
+    flex: 4;
 }
 
 .page-header .title h1 {
     font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 34px;
     padding: 0;
     margin: 0;
 }
@@ -28,7 +33,7 @@
     font-family: Roboto, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -36,7 +41,7 @@
 }
 
 .page-header .search {
-    flex: 4;
+    flex: 3;
 }
 
 .page-header .button {
@@ -45,5 +50,14 @@
 
 .page-header .login {
     flex: 3;
+}
+
+.page-content {
+    flex: 100;
+}
+
+.page-white {
+    flex: 100;
+    background: white;
 }
 
