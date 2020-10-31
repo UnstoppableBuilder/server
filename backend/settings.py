@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -95,9 +95,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-         'NAME': 'ub',
-         'USER': 'postgres',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': os.getenv("UB_DB_NAME", 'ub'),
+        'USER': os.getenv("UB_DB_USER", 'postgres'),
+        'PASSWORD': os.getenv("UB_DB_PASSWORD", None),
+        'HOST': os.getenv("UB_DB_HOST", '127.0.0.1'),
+        'PORT': os.getenv("UB_DB_PORT", '5432'),
     },
 }
 
