@@ -25,7 +25,7 @@ SECRET_KEY = 'm%i$oy96l*mb$u7--nn)jnkjm_l3f-z5l(zu)g5yu6j6cfxk3a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ub.pkozlov.ru', '127.0.0.1']
+ALLOWED_HOSTS = ['ub.pkozlov.ru', '127.0.0.1', 'localhost']
 
 
 # Application definition

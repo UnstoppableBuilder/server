@@ -1,0 +1,49 @@
+.page {
+    padding: 30px;
+}
+
+.page-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #D4D4D4;
+    display: flex;
+}
+
+.page-header .title {
+    flex: 3;
+}
+
+.page-header .title h1 {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.page-header .title p {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    color: #707C97;
+}
+
+.page-header .search {
+    flex: 4;
+}
+
+.page-header .button {
+    flex: 2;
+}
+
+.page-header .login {
+    flex: 3;
+}
+

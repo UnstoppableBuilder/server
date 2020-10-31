@@ -25,7 +25,7 @@ class Worker(models.Model):
 
 class Session(models.Model):
     worker = models.ForeignKey(Worker, on_delete=models.CASCADE)
-    workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT)
+    workplace = models.ForeignKey(Workplace, on_delete=models.PROTECT, related_name='sessions')
     zone = models.ForeignKey(Zone, null=True, default=None, on_delete=models.PROTECT)
     started_at = models.DateTimeField()
     ended_at = models.DateTimeField(null=True, db_index=True)

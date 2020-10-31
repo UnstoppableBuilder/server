@@ -30,8 +30,7 @@ router.register(r'session', SessionViewSet, basename='session')
 
 urlpatterns = [
     path('api/', include(router.urls)),
-    path('admin_api/', include(router.urls)),
-    # path('auth/', AuthToken.as_view()),
+    path('admin-api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
 ]

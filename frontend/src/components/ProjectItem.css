@@ -1,0 +1,88 @@
+.project-item {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    margin: 15px 0;
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    min-height: 150px;
+    transition: box-shadow 150ms;
+}
+
+.project-item:hover {
+    box-shadow: 1px 0px 10px rgba(0, 187, 196, 0.45), 0px 0px 10px rgba(0, 187, 196, 0.55), 4px 0px 25px rgba(0, 187, 196, 0.75);
+}
+
+.project-item .title {
+    flex: 6;
+}
+
+.project-item .title h3 {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 20px;
+    letter-spacing: 0.150484px;
+    color: #000000;
+}
+
+.project-item .title p {
+    padding: 0;
+    margin: 15px  0;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 17px;
+    letter-spacing: 0.0427169px;
+    color: #BEBEBE;
+}
+
+.project-item .info {
+    flex: 3;
+    display: flex;
+    align-items: center;
+}
+
+.project-item .info .list {
+
+}
+
+.project-item .info .list p {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 17px;
+    /* or 94% */
+    letter-spacing: 0.0427169px;
+    color: #BEBEBE;
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+
+.project-item .count {
+    flex: 1;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.150484px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+}
+
+.project-item .count svg {
+    margin-bottom: 60px;
+}

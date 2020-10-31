@@ -11,7 +11,8 @@ class ZoneSerializer(serializers.ModelSerializer):
 
 class WorkplaceSerializer(serializers.ModelSerializer):
     zones = ZoneSerializer(many=True)
+    worker_count = serializers.IntegerField()
 
     class Meta:
         model = Workplace
-        fields = ['id', 'name', 'address', 'zones']
+        fields = ['id', 'name', 'address', 'zones', 'contract', 'squares', 'customer', 'contractor', 'worker_count']

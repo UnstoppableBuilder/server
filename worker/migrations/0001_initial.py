@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='session',
             name='workplace',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='workplace.workplace'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='workplace.workplace', related_name='sessions'),
         ),
         migrations.AddField(
             model_name='session',
