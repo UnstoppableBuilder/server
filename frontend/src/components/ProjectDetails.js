@@ -14,6 +14,8 @@ import { ReactComponent as CalendarIcon } from '../icons/calendar.svg';
 import { ReactComponent as ProjectIcon } from '../icons/projects.svg';
 
 import '../pages/Page.css';
+import ProjectWorkers from "./ProjectWorkers";
+
 
 export default function ProjectDetails() {
   const match = useRouteMatch();
@@ -59,6 +61,14 @@ export default function ProjectDetails() {
           <NavLink to={`${match.url}/info`}><ProjectIcon />&nbsp;Паспорт проекта</NavLink>
         </div>
       </div>
+      <Switch>
+        <Route path={`${match.path}/workers`}>
+          <ProjectWorkers item={item} projectId={projectId} />
+        </Route>
+        <Route path={match.path}>
+          <ProjectWorkers item={item} projectId={projectId} />
+        </Route>
+      </Switch>
     </div>
   </div>;
 };

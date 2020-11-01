@@ -67,6 +67,8 @@
     flex-direction: row;
     /*align-items: center;*/
     justify-content: space-around;
+    border-bottom: 1px solid #D4D4D4;
+    z-index: 1000;
 }
 
 .sub-nav .sub-nav-item {
@@ -96,7 +98,6 @@
 .sub-nav .sub-nav-item a.active, .sub-nav .sub-nav-item a:hover {
   cursor: pointer;
   color: #00BBC4;
-  border-bottom: 3px solid #00BBC4;
 }
 
 .sub-nav .sub-nav-item a.active path, .sub-nav .sub-nav-item a:hover path {
