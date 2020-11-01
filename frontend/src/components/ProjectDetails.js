@@ -1,9 +1,22 @@
 import { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  NavLink,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+
+import { ReactComponent as SvodkaIcon } from '../icons/svodka.svg';
+import { ReactComponent as HeadIcon } from '../icons/littlehead.svg';
+import { ReactComponent as ChatIcon } from '../icons/chat.svg';
+import { ReactComponent as CalendarIcon } from '../icons/calendar.svg';
+import { ReactComponent as ProjectIcon } from '../icons/projects.svg';
 
 import '../pages/Page.css';
 
-export default function ProjectList() {
+export default function ProjectDetails() {
+  const match = useRouteMatch();
   const { projectId } = useParams();
   const [item, setItem] = useState(null)
   useEffect(() => {
@@ -31,7 +44,19 @@ export default function ProjectList() {
     <div className="page-white">
       <div className="sub-nav">
         <div className="sub-nav-item">
-          <a href=""></a>
+          <NavLink to={`${match.url}`} exact={true}><SvodkaIcon />&nbsp;Статистика</NavLink>
+        </div>
+        <div className="sub-nav-item">
+          <NavLink to={`${match.url}/workers`}><HeadIcon />&nbsp;Сотрудники</NavLink>
+        </div>
+        <div className="sub-nav-item">
+          <NavLink to={`${match.url}/chat`}><ChatIcon />&nbsp;Чат</NavLink>
+        </div>
+        <div className="sub-nav-item">
+          <NavLink to={`${match.url}/calendar`}><CalendarIcon />&nbsp;Календарный план</NavLink>
+        </div>
+        <div className="sub-nav-item">
+          <NavLink to={`${match.url}/info`}><ProjectIcon />&nbsp;Паспорт проекта</NavLink>
         </div>
       </div>
     </div>

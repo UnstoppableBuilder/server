@@ -11,7 +11,7 @@ import './ProjectItem.css';
 
 export default function ProjectItem(props) {
   const match = useRouteMatch();
-  return <NavLink to={`${match.url}/${props.item.id}/`} className="project-item">
+  return <NavLink to={`${match.url}/${props.item.id}`} className="project-item">
     <div className="title">
       <h3>{props.item.name}</h3>
       <p>{props.item.contract}</p>
